@@ -17,7 +17,11 @@
             <label for="InputPasswordConfirm" class="form-label">Confirm Password</label>
             <input name="confirm_password" type="password" class="form-control" id="InputPasswordConfirm">
         </div>
+
+        <!-- Fetches login error from the "register_functions.php" page -->
         <p class="text-danger"> <?php echo getRegisterError() ?> </p>
+        
+        <!-- Clicking button calles the if statement "isset($_POST['register_submit]) from "login_model.php"  -->
         <button type="submit" name="register_submit" class="btn btn-dark">Register</button>
     </form>
 </div>

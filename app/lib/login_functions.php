@@ -1,5 +1,11 @@
 <?php
 
+
+/*
+* Check for empty inputs :
+* 1. To add more inputs enter the data inputed into the relevant intput variables in the signature of the function
+* 2. Add the "empty()" function to the if statement with the relevant variable in its signature
+*/
 function checkForEmptyInputsInLogin($user, $password){ 
     if(empty($user) || empty($password)) {
         $result = true;
@@ -9,6 +15,11 @@ function checkForEmptyInputsInLogin($user, $password){
     return $result;
 }
 
+/*
+* Fetch user information from database :
+* 1. Adjust the fields eg. "users_username" or "users_email" to match the database
+* 2. Set header location to existing relevant page in web app
+*/
 function getUserData($connection, $username, $email) {
     $sql = "SELECT * FROM users WHERE users_username = ? OR users_email = ?;";
     $stmt = mysqli_stmt_init($connection);
@@ -32,6 +43,12 @@ function getUserData($connection, $username, $email) {
     mysqli_stmt_close($stmt);
 }
 
+/*
+* Log the user into the application :
+* 1. Enter all username and password field rename the fields in "$userData['']" to match your database
+* 2. Set header location to existing relevant page in web app
+* 3. (Enter the unhashed password)
+*/
 function loginUser($connection, $username, $email, $password) {
     $userData = getUserData($connection, $username, $email);
 
