@@ -5,7 +5,7 @@
         return isset($_REQUEST[$name]) ? $_REQUEST[$name] : $default;
     }
 
-    // get the current active page (for navbar)
+    // Get the current active page (for navbar)
     function is_active($page, $current_link)
     {
         return $page == $current_link ? 'active' : '';

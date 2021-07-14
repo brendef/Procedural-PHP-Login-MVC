@@ -67,6 +67,7 @@ function loginUser($connection, $username, $email, $password) {
         session_start();
         $_SESSION['users_id'] = $userData['users_id'];
         $_SESSION['users_username'] = $userData['users_username'];
+        $_SESSION['users_role'] = $userData['roles_id'];
 
         header('Location: ?page=home');
         exit();
