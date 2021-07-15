@@ -1,6 +1,6 @@
 <?php
 // Define the application folder and set the path
-defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../app'));
+defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/app'));
 
 // Replace slashed with DS
 const DS = DIRECTORY_SEPARATOR;
